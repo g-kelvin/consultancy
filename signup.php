@@ -9,12 +9,12 @@
 		$password = $_POST['password'];
 		$telephone = $_POST['telephone'];
 
-		if(mysqli_query($conn, "INSERT INTO feedback (email, password, telephone ) VALUES ('$email', '$password', '$telephone')")){
-			echo "Thank you for getting to us";
+		if(mysqli_query($conn, "INSERT INTO regitser (email, password, telephone ) VALUES ('$email', '$password', '$telephone')")){
+			echo "Thank you for registering with us";
 		}
 		else
 		{
-			echo "error in regitration";
+			echo "Error in regitration";
 		}
 	}
 

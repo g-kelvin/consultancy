@@ -5,16 +5,17 @@
 		echo "error ";
 	}
 	else {
-		$email = $_POST['email'];
-		$password = $_POST['password'];
-		$telephone = $_POST['telephone'];
+		$name = $_POST['name'];
+		$email= $_POST['email'];
+		$subject = $_POST['subject'];
+		$message=$_POST['message'];
 
-		if(mysqli_query($conn, "INSERT INTO regitser (email, password, telephone ) VALUES ('$email', '$password', '$telephone')")){
-			echo "you have successfully registered $email";
+		if(mysqli_query($conn, "INSERT INTO feedback (name, email, subject, message) VALUES ('$name', '$email', '$subject','$message')")){
+			echo "Thanks you for getting to us $name. We value you";
 		}
 		else
 		{
-			echo "error in regitration";
+			echo "An error occured. please try again";
 		}
 	}
 
