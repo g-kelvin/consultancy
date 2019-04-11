@@ -1,5 +1,12 @@
 <?php 
-echo "kelvin love christabel";
-echo "yes we go you";
+
+	$conn=mysqli_connect('localhost','root','kelvingauki','kelvin');
+	if (!$conn){
+		echo "erroe";
+	}
+	else {
+		echo "you are good kelvin";
+	}
+
 
  ?>
