@@ -104,7 +104,7 @@
 						}
 						else {
 							$email = $_POST['email'];
-							$password = $_POST['password'];
+							$password=hash('sha256',$_POST['password']);
 							$telephone = $_POST['telephone'];
 
 							if(mysqli_query($conn, "INSERT INTO register (email, password, telephone ) VALUES ('$email', '$password', '$telephone')")){
