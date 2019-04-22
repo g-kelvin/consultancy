@@ -62,7 +62,7 @@
 					<li><a href="services.html">Services</a></li><br>
 					<li><a href="about.html">About</a></li><br>
 					<li><a href="work.html">Products</a></li><br>
-					<li class="colorlib-active"><a href="contact.html">Contact</a></li><br>
+					<li><a href="contact.html">Contact</a></li><br>
 					<li><a href="blog/vacancies.html">Career</a></li><br>
                      <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Media<i class="icon-angle-down"></i></a>
@@ -108,11 +108,11 @@
 								echo "error ";//no connection
 							}
 							else {//all working well
-								$qry = "SELECT * FROM feedback ";
+								$qry = "SELECT * FROM feedback ORDER BY id DESC  LIMIT 3";
 								$res=mysqli_query($conn,$qry);
 								if(mysqli_num_rows($res)>0){
 									while ($row= mysqli_fetch_assoc($res)){
-										echo "Name= ". $row['name']. "<br>"."Telephone Number= ".$row['telephone']. "<br>"."Email= ".$row['email']. "<br>"."Subject= ".$row['subject']. "<br>"."Message= ".$row['message']."<br>"."Time Posted =".$row['daten']."<hr/> <br><br>";
+										echo "Name= ". $row['name']. "<br>"."Telephone Number= ".$row['telephone']. "<br>"."Email= ".$row['email']. "<br>"."Subject= ".$row['subject']. "<br>"."Message= ".$row['message']."<br>"."Time Posted =".$row['daten']."  "."<a href=\"deleteuser.php\">Delete</a>"."<hr/> <br><br>";
 										
 									}
 								}
@@ -134,11 +134,11 @@
 								echo "error ";//no connection
 							}
 							else {//all working well
-								$qry = "SELECT * FROM register";
+								$qry = "SELECT * FROM register ORDER BY id DESC LIMIT 3 ";
 								$res=mysqli_query($conn,$qry);
 								if(mysqli_num_rows($res)>0){
 									while ($row= mysqli_fetch_assoc($res)){
-										echo "Telephone Number= ".$row['telephone']. "<br>"."Email= ".$row['email']. "<br>"."Password= ".$row['password']."<hr/> <br><br>";
+										echo "Telephone Number= ".$row['telephone']. "<br>"."Email= ".$row['email']. "<br>"."Password= ".$row['password']."  "."<a href=\"deleteuser.php\">Delete</a>"."<hr/> <br><br>";
 										
 										
 									}

@@ -59,7 +59,7 @@
 			<nav id="colorlib-main-menu" role="navigation">
 				<ul>
 					<li><a href="index.html">Home</a></li><br>
-					<li class="colorlib-active"><a href="services.html">Services</a></li><br>
+					<li><a href="services.html">Services</a></li><br>
 					<li><a href="about.html">About</a></li><br>
 					<li><a href="work.html">Products</a></li><br>
 					<li><a href="contact.html">Contact</a></li><br>

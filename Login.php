@@ -59,7 +59,7 @@
 			<nav id="colorlib-main-menu" role="navigation">
 				<ul>
 					<li><a href="index.html">Home</a></li><br>
-					<li class="colorlib-active"><a href="services.html">Services</a></li><br>
+					<li><a href="services.html">Services</a></li><br>
 					<li><a href="about.html">About</a></li><br>
 					<li><a href="work.html">Products</a></li><br>
 					<li><a href="contact.html">Contact</a></li><br>
@@ -104,21 +104,25 @@
 				else{
 					$email=$_POST['email'];
 					$password=hash('sha256',$_POST['password']);
-					$sql=mysqli_query($conn,"SELECT * FROM register WHERE email='$email' AND password='$password'");
+					$sql=mysqli_query($conn,"SELECT * FROM register WHERE email='info@dataconsultancy.co.ke' AND password='$password'");
 					$res=mysqli_num_rows($sql);
 					if($res<1){
-						echo "<h1>please check your inputs and try again</h1>";
-						header("refresh:3;url=register.html");
+						echo "<h3>please check your inputs and try again<br>Wrong Password or Email!!</h3>";
+						// header('location:register.html');
 						
 					}
 					else{
-						echo "congratulation, login successful ";
-						header("refresh:3;url=users.php");
+						$x= date('Y-m-d H:i:s'); 
+						echo "<H3>DATE AND TIME NOW:  ".$x ."<br></H3>";
+						echo "congratulation, login successful <br> <H4s> click to view the Admin Page <a href=\" users.php\">Admin</a></H4> ";
+						
+
 
 
 					}
 				}
 			?>
+
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
