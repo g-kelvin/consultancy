@@ -1,5 +1,5 @@
 <?php 
-	$conn=mysqli_connect('localhost','root','kelvingauki','consultancy');
+	$conn=mysqli_connect('localhost','datacons_user','FlamigoKelvin@890','dataons_main_db');
 	if (!$conn){
 		echo "error";
 	}
