@@ -97,7 +97,7 @@
 						</div>
 					</div>
 					<?php  
-				$conn=mysqli_connect('localhost','datacons_user','FlamigoKelvin@890','dataons_main_db');
+				$conn=mysqli_connect('localhost','datacons_user','FlamigoKelvin@890','datacons_main_db');
 				if(!$conn){
 					echo "not connected";
 				}
