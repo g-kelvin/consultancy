@@ -108,7 +108,7 @@
 							$telephone = $_POST['telephone'];
 
 							if(mysqli_query($conn, "INSERT INTO register (email, password, telephone ) VALUES ('$email', '$password', '$telephone')")){
-								echo " Thank you for registering with us user  of 	Email = $email and Telephone = $telephone ";
+								echo " Thank you for registering with us user  of 	Email = $email and Telephone = $telephone. Your registration status is pending awaiting approval ";
 							}
 							else
 							{
