@@ -1,0 +1,23 @@
+Options +FollowSymLinks
+RewriteEngine On
+
+RewriteCond %{SERVER_PORT} 80
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^(.*)$ https://www.dataconsultancy.co.ke/$1 [R,L]
+
+# Add the redirects for urls
+RewriteRule ^/?$ index.html [NC,L]
+RewriteRule ^about/?$ about.html [NC,L]
+RewriteRule ^contact/?$ contact.html [NC,L]
+RewriteRule ^gallery/?$ gallery.html [NC,L]
+RewriteRule ^login/?$ login.html [NC,L]
+RewriteRule ^register/?$ register.html [NC,L]
+RewriteRule ^signup/?$ signup.php [NC,L]
+RewriteRule ^services/?$ services.html [NC,L]
+RewriteRule ^work/?$ work.html [NC,L]
+RewriteRule ^users/?$ users.php [NC,L]
+RewriteRule ^feedback/?$ feedback.php [NC,L]
+RewriteRule ^blog/?$ blog/blog.html [NC,L]
+RewriteRule ^blog/blog/?$ blog/blog.html [NC,L]
+RewriteRule ^blog/vacancies?$ blog/vacancies.html [NC,L]
