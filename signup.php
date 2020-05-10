@@ -87,12 +87,12 @@
 				<div class="colorlib-narrow-content">
 					<div class="row">
 						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-							<h2 class="colorlib-heading">CONGRATULATION FOR REGISTERING WITH US</h2>
+							<h2 class="colorlib-heading">CONGRATULATION FOR REGISTERING WITH US.</h2>
 						</div>
 					</div>
 					<?php 
 
-						$conn=mysqli_connect('localhost','datacons_user','FlamigoKelvin@890','datacons_main_db');
+						$conn=mysqli_connect('localhost','eabgdjql','KelvinFlamigo@890','eabgdjql_softwaretechn');
 						if (!$conn){
 							echo "error ";
 						}
@@ -106,9 +106,10 @@
 							}
 							else
 							{
-								echo "Error in regitration";
+								echo " Thank you for registering with us user  of 	Email = $email and Telephone = $telephone. Your registration status is pending awaiting approval ";
 							}
-						}
+
+												}
 
 
 					 ?>

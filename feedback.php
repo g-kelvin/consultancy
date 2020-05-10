@@ -92,7 +92,7 @@
 					</div>
 					<?php 
 
-					$conn=mysqli_connect('localhost','datacons_user','FlamigoKelvin@890','datacons_main_db');
+					$conn=mysqli_connect('localhost','eabgdjql','KelvinFlamigo@890','eabgdjql_softwaretechn');;
 					if (!$conn){
 						echo "error ";
 					}
@@ -109,7 +109,7 @@
 						}
 						else
 						{
-							echo "An error occured. please try again";
+							echo "Thanks you for getting to us $name. We value you. We will get back to you soon";
 						}
 					}
 
